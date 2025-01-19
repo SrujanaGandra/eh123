@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Dynamic Elements</title>
+</head>
+<body>
+  <button id="add-item">Add Item</button>
+  <ul id="list"></ul>
+  <script>
+
+    document.getElementById('add-item').addEventListener('click', () => {
+        const li = document.createElement('li');
+        li.textContent = 'Click me!';
+        
+        li.addEventListener('click', () => {
+          alert('Item clicked!');
+        });
+        
+        document.getElementById('list').appendChild(li);
+      });
+      
+  </script>
+</body>
+</html>

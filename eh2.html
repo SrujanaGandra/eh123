@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Example</title>
+</head>
+<body>
+  <h1 id="heading">Original Heading</h1>
+  <button id="change-content">Change Content</button>
+  <button id="change-style">Change Style</button>
+  <script>
+
+document.getElementById('change-content').addEventListener('click', () => {
+    const heading = document.getElementById('heading');
+    heading.textContent = 'Content Changed!';
+  });
+  
+
+  document.getElementById('change-style').addEventListener('click', () => {
+    const heading = document.getElementById('heading');
+    heading.style.color = 'red';
+    heading.style.fontSize = '2rem';
+    heading.style.fontFamily = 'Arial, sans-serif';
+  });
+  
+  </script>
+
+</body>
+</html>
